@@ -7,20 +7,6 @@ import time as tm
 import json
 import tkinter
 
-#Setup time
-scheduler = input('put your time here')
-def timer():
-    wifi()
-    mis_mes()
-    main_api()
-
-    schedule.every().day.at(scheduler).do(timer)
-
-
-    while True:
-        schedule.run_pending()
-        tm.sleep(1)
-
 # Connect to MIR wifi automatically (??? mb not needed)
 # scan available Wifi networks
 def wifi():
@@ -108,3 +94,18 @@ def main_api():
  mission_id_2 = dict_missions[create_mission_2]['guid']
  regular_mission = requests.post(host + 'mission_queue', json=mission_id_2, headers=headers)
  print(regular_mission)
+
+
+#Setup time
+scheduler = input('put your time here')
+def timer():
+    wifi()
+    mis_mes()
+    main_api()
+
+    schedule.every().day.at(scheduler).do(timer)
+
+
+    while True:
+        schedule.run_pending()
+        tm.sleep(1)
