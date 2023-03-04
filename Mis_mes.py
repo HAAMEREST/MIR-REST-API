@@ -16,7 +16,7 @@ host = 'http://' + ip + '/api/v2.0.0/'
 # Format Headers
 headers = {}
 headers['Content-Type'] = 'application/json'
-headers['Authorization'] = 'Basic YWRtaW46OGM2OTc2ZTViNTQxMDQxNWJkZTkwOGJkNGRlZTE1ZGZiMTY3YTljODczZmM0YmI4YTgxZjZmMmFiNDQ4YTkxOA=='
+headers['Authorization'] = 'Basic dHVkZW5nOmQxMzE1MDFlYzFmZjA5MjA3MDg3MjE1NDhhMjg1ODdjOWRkMmRlN2RhMGM3MDZlNzRmMzczMTZmZmE0ZTljMzc='
 
 def mis_mes():
     first_position = input('your first position name')
