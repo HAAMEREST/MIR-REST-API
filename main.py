@@ -9,14 +9,14 @@ import tkinter
 
 # Connect to MIR wifi automatically (??? mb not needed)
 # scan available Wifi networks
-def wifi():
- os.system('cmd /c "netsh wlan show networks"')
+#def wifi():
+ #os.system('cmd /c "netsh wlan show networks"')
  # input Wifi name
- name_of_router = input('Enter Name/SSID of the Wifi Network you wish to connect to: ')
+ #name_of_router = input('Enter Name/SSID of the Wifi Network you wish to connect to: ')
  # connect to the given wifi network
- os.system(f'''cmd /c "netsh wlan connect name={name_of_router}"''')
+ #os.system(f'''cmd /c "netsh wlan connect name={name_of_router}"''')
 
- print("If you're not yet connected, try connecting to a previously connected SSID again!")
+ #print("If you're not yet connected, try connecting to a previously connected SSID again!")
 
 
 
@@ -99,7 +99,7 @@ def main_api():
 #Setup time
 scheduler = input('put your time here')
 def timer():
-    wifi()
+   # wifi()
     mis_mes()
     main_api()
 
