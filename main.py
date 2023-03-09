@@ -64,8 +64,8 @@ def main_api():
     dict_missions[mission['name']] = mission
 
  list_name_missions =dict_missions .keys()
- create_mission_1 = input()
- create_mission_2 = input()
+ create_mission_1 = input('enter your charging mission name here :')
+ create_mission_2 = input('enter your regular mission name here :')
  guid_1 = dict_missions[create_mission_1]['guid']
  guid_2 = dict_missions[create_mission_2]['guid']
 

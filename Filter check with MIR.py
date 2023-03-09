@@ -41,7 +41,7 @@ def main_api():
  print(delete_actions)
 
 # Calling Charging Mission #Should be user input
- mission_id_1 = guid_1
+ mission_id_1 = {guid_1}
  charging_mission = requests.post(host + 'mission_queue', json=mission_id_1, headers=headers)
  print(charging_mission)
  sleep(150)  # // if delay is needed  // number in () is seconds
@@ -51,8 +51,14 @@ def main_api():
  print(delete_charging)
 
 # Calling Regular Mission Back #Should be user input
- mission_id_2 = guid_2
+ mission_id_2 = {guid_2}
  regular_mission = requests.post(host + 'mission_queue', json=mission_id_2, headers=headers)
  print(regular_mission)
 
 main_api()
+
+
+#400 Argument error or Missing content type application/json on the
+#header or Bad request or Invalid JSON
+
+#204 The element has been deleted successfully
