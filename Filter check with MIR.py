@@ -34,24 +34,28 @@ def main_api():
  guid_1 = dict_missions[create_mission_1]['guid']
  guid_2 = dict_missions[create_mission_2]['guid']
 
+ guid_id_1 = json.loads(guid_1.content)
+ guid_id_2 = json.loads(guid_2.content)
+
+
 
 # If last action  is done then
 # Delete All Missions In Queue
- delete_actions = requests.delete(host + 'mission_queue', headers=headers)
- print(delete_actions)
+ #delete_actions = requests.delete(host + 'mission_queue', headers=headers)
+ #print(delete_actions)
 
 # Calling Charging Mission #Should be user input
- mission_id_1 = {guid_1}
+ mission_id_1 = guid_id_1
  charging_mission = requests.post(host + 'mission_queue', json=mission_id_1, headers=headers)
  print(charging_mission)
  sleep(150)  # // if delay is needed  // number in () is seconds
 
 # Delete Charging Mission After Time #Should be same with calling mission
- delete_charging = requests.delete(host + 'mission_queue', json=mission_id_1, headers=headers)
- print(delete_charging)
+ #delete_charging = requests.delete(host + 'mission_queue', json=mission_id_1, headers=headers)
+ #print(delete_charging)
 
 # Calling Regular Mission Back #Should be user input
- mission_id_2 = {guid_2}
+ mission_id_2 = guid_id_2
  regular_mission = requests.post(host + 'mission_queue', json=mission_id_2, headers=headers)
  print(regular_mission)
 

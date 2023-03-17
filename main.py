@@ -28,7 +28,7 @@ host = 'http://' + ip + '/api/v2.0.0/'
 # Format Headers
 headers = {}
 headers['Content-Type'] = 'application/json'
-headers['Authorization'] = 'Basic YWRtaW46OGM2OTc2ZTViNTQxMDQxNWJkZTkwOGJkNGRlZTE1ZGZiMTY3YTljODczZmM0YmI4YTgxZjZmMmFiNDQ4YTkxOA=='
+headers['Authorization'] = 'Basic dHVkZW5nOmQ2NmQ4MDJiNjQ5NDkxMjY3Njk5NTU1MGUxNGY3MzQ5NGNjYzIxZmJiZWVjOGZiMThhM2RlMGU3YjQwMjNjYzY='
 
 
 def mis_mes():
@@ -77,8 +77,8 @@ def main_api():
 
 # If last action  is done then
 # Delete All Missions In Queue
- delete_actions = requests.delete(host + 'mission_queue', headers=headers)
- print(delete_actions)
+ #delete_actions = requests.delete(host + 'mission_queue', headers=headers)
+ #print(delete_actions)
 
 # Calling Charging Mission #Should be user input
  mission_id_1 = dict_missions[create_mission_1]['guid']
@@ -97,15 +97,15 @@ def main_api():
 
 
 #Setup time
-scheduler = input('put your time here')
-def timer():
+#scheduler = input('put your time here')
+#def timer():
    # wifi()
-    mis_mes()
-    main_api()
+    #mis_mes()
+    #main_api()
 
-    schedule.every().day.at(scheduler).do(timer)
+    #schedule.every().day.at(scheduler).do(timer)
 
 
-    while True:
-        schedule.run_pending()
-        tm.sleep(1)
+    #while True:
+        #schedule.run_pending()
+        #tm.sleep(1)
